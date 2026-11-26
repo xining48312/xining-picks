@@ -3,23 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>文章標題 — Xining Picks</title>
+  <title>文章標題 — 同級之選</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <article>
-    <header>
-      <div class="wrap">
-        <a class="back" href="../index.html">← 返回首頁</a>
-        <h1>文章標題</h1>
-        <p class="meta">發布日期：YYYY-MM-DD</p>
+  <header class="site-header">
+    <div class="header-wrap">
+      <div class="brand-row">
+        <a class="brand" href="../index.html">同級之選</a>
+        <p class="tagline">把價位相近的款式放在一起，看各自強在哪裡</p>
       </div>
-    </header>
-    <div class="wrap">
-      <p>在這裡寫文章內容。需要放分潤連結時，只使用使用者提供的蝦皮官方推廣短連結。</p>
+      <div class="categories" aria-label="文章分類">
+        <span class="chip">全部</span>
+        <span class="chip">家電</span>
+        <span class="chip">租屋</span>
+        <span class="chip">生活</span>
+      </div>
     </div>
-  </article>
-  <footer>
+  </header>
+  <main class="wrap article-main">
+    <a class="back" href="../index.html">← 返回首頁</a>
+    <article>
+      <header class="article-header">
+        <div class="meta">
+          <span class="chip purple">文章分類</span>
+          <span>YYYY-MM-DD</span>
+        </div>
+        <h1 class="page-title">文章標題</h1>
+      </header>
+      <section class="article-copy" aria-labelledby="guide-heading">
+        <h2 id="guide-heading" class="section-title">選購重點</h2>
+        <p>在這裡說明選購時需要比較的規格與適用情境。</p>
+      </section>
+      <section aria-labelledby="ranking-heading">
+        <h2 id="ranking-heading" class="section-title">商品排行</h2>
+        <ol class="ranking-grid" role="list">
+          <li class="card product-card">
+            <span class="rank-badge" aria-hidden="true">1</span>
+            <h3>商品名稱</h3>
+            <ul class="specs">
+              <li>商品類型</li>
+              <li>重點規格</li>
+            </ul>
+            <div class="product-bottom">
+              <p class="price"><span class="price-label">價格區間</span><strong>待補價格</strong></p>
+              <span class="btn-placeholder">待補連結</span>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer">
     <div class="wrap">
       <p>本站含蝦皮分潤連結，透過連結購買我可能獲得分潤，不影響你的價格</p>
     </div>
