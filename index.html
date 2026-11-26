@@ -3,40 +3,161 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>同級之選</title>
+  <title>選購指南｜同級之選</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="header-wrap">
-      <div class="brand-row">
+    <div class="header-inner wrap">
+      <div class="brand-block">
         <a class="brand" href="index.html">同級之選</a>
-        <p class="tagline">把價位相近的款式放在一起，看各自強在哪裡</p>
+        <span class="tagline">把價位相近的款式放在一起，看各自強在哪裡</span>
       </div>
-      <div class="categories" aria-label="文章分類">
-        <span class="chip purple">全部</span>
-        <span class="chip">家電</span>
-        <span class="chip">租屋</span>
-        <span class="chip">生活</span>
-      </div>
+      <nav class="site-nav" aria-label="主導覽">
+        <a class="chip is-current" href="index.html#categories">全部分類</a>
+        <a class="chip" href="index.html#cat-appliance">家電</a>
+        <a class="chip" href="index.html#cat-rental">租屋</a>
+        <a class="chip" href="index.html#cat-life">生活</a>
+        <a class="chip" href="index.html#cat-season">季節</a>
+      </nav>
     </div>
   </header>
   <main class="wrap home">
-    <h1 class="section-title">選購指南</h1>
-    <div class="post-grid">
-      <article class="card post-card">
-        <div class="meta">
-          <span class="chip purple">家電</span>
-          <time datetime="2026-11-26">2026-11-26</time>
+    <section class="hero">
+      <div class="hero-copy">
+        <small class="eyebrow">選購指南　／　BUYING GUIDE</small>
+        <h1>同價位，<br>放在一起比<span>。</span></h1>
+        <p>把價位相近的款式放在一起，看各自強在哪裡</p>
+        <a class="hero-search" href="#categories">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 16l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0z"/></svg>
+          想比較哪一類？<b>看分類 →</b>
+        </a>
+        <div class="hero-chips">熱門分類　<a class="chip" href="#cat-appliance">家電</a> <a class="chip" href="#cat-rental">租屋</a> <a class="chip" href="#cat-life">生活</a> <a class="chip" href="#cat-season">季節</a></div>
+      </div>
+      <figure class="hero-art">
+        <img src="images/hero-home.jpg" alt="冬夜小套房：床舖與書桌旁的暖燈，窗外是藍紫色的暮色" width="1280" height="720">
+      </figure>
+    </section>
+
+    <section id="categories">
+      <header class="section-head">
+        <small class="eyebrow">CATEGORIES</small>
+        <h2 class="section-title">依分類探索</h2>
+      </header>
+      <div class="category-grid">
+        <a class="category-card" id="cat-appliance" href="#featured">
+          <span class="category-media"><img src="images/cat-appliance.jpg" alt="窗邊廚房一角的日常家電情境" width="1152" height="864" loading="lazy"></span>
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v5m8-5v5M6 8h12v3a6 6 0 0 1-12 0zm6 9v5"/></svg></span>
+          <strong>家電</strong>
+          <small>冷暖・空氣調節</small>
+          <span class="category-count">1 篇</span>
+        </a>
+        <a class="category-card" id="cat-rental" href="#featured">
+          <span class="category-media"><img src="images/cat-rental.jpg" alt="租屋套房門口：鑰匙、拖鞋與微開的門" width="1152" height="864" loading="lazy"></span>
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 10v11h14V10M10 21v-7h4v7"/></svg></span>
+          <strong>租屋</strong>
+          <small>套房・空間配置</small>
+          <span class="category-count">1 篇</span>
+        </a>
+        <a class="category-card" id="cat-life" href="#categories">
+          <span class="category-media"><img src="images/cat-life.jpg" alt="窗邊小桌上的茶杯、書與植物" width="1152" height="864" loading="lazy"></span>
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h12v7a6 6 0 0 1-12 0zm12 1h2a3 3 0 0 1 0 6h-2M3 21h16"/></svg></span>
+          <strong>生活</strong>
+          <small>餐廚・日常用品</small>
+          <span class="tag">整理中</span>
+        </a>
+        <a class="category-card" id="cat-season" href="#categories">
+          <span class="category-media"><img src="images/cat-season.jpg" alt="冬日窗邊：針織毯與冒熱氣的杯子" width="1152" height="864" loading="lazy"></span>
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14V5a3 3 0 0 1 6 0v9a5 5 0 1 1-6 0zm3-5v8m6-11h3m-3 4h2"/></svg></span>
+          <strong>季節</strong>
+          <small>保暖・換季用品</small>
+          <span class="tag">整理中</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <header class="section-head">
+        <small class="eyebrow">FEATURED</small>
+        <h2 class="section-title">精選比較</h2>
+      </header>
+      <!-- POSTS:START -->
+      <a class="post-card post-card--lg" href="posts/xiaopingshu-zuwu-diannuanqi-2026.html">
+        <div class="post-thumb">
+          <span class="tag">家電</span>
+          <img src="images/cover-heater-guide.jpg" alt="冬夜書桌角落的暖光，用於電暖器選購指南封面" width="1280" height="720" loading="lazy">
         </div>
-        <h2><a href="posts/xiaopingshu-zuwu-diannuanqi-2026.html">小坪數租屋電暖器怎麼挑？怕跳電先看功率：5 款 2026 冬季比較</a></h2>
-        <p>小坪數怕跳電，先看瓦數和迴路，再對照 5 款電暖器的品牌官網規格。</p>
-      </article>
-    </div>
+        <div>
+          <small class="post-meta">家電・租屋　·　<time datetime="2026-11-26">2026-11-26</time>　·　比較 5 款</small>
+          <h3>小坪數租屋電暖器怎麼挑？怕跳電先看功率：5 款 2026 冬季比較</h3>
+          <p>小坪數怕跳電，先看瓦數和迴路，再對照 5 款電暖器的品牌官網規格。</p>
+          <p class="post-price-band">NT$1,690–7,580</p>
+          <b>閱讀比較 →</b>
+        </div>
+      </a>
+      <!-- POSTS:END -->
+    </section>
+
+    <section class="latest">
+      <header class="section-head">
+        <small class="eyebrow">LATEST</small>
+        <h2 class="section-title">最新文章</h2>
+      </header>
+      <a class="post-row" href="posts/xiaopingshu-zuwu-diannuanqi-2026.html">
+        <div class="post-thumb">
+          <img src="images/cover-heater-guide.jpg" alt="冬夜書桌角落的暖光，用於電暖器選購指南封面" width="1280" height="720" loading="lazy">
+        </div>
+        <div>
+          <small class="post-meta">家電・租屋　·　<time datetime="2026-11-26">2026-11-26</time></small>
+          <h3>小坪數租屋電暖器怎麼挑？怕跳電先看功率：5 款 2026 冬季比較</h3>
+        </div>
+      </a>
+    </section>
+
+    <section class="method" id="method">
+      <header class="section-head">
+        <small class="eyebrow">OUR METHOD</small>
+        <h2 class="section-title">我們怎麼挑</h2>
+      </header>
+      <div class="method-steps">
+        <div class="method-step">
+          <span class="step-num">01</span>
+          <h3>先分價位</h3>
+          <p>先列官網售價，把預算相近的款式放在一起。</p>
+        </div>
+        <div class="method-step">
+          <span class="step-num">02</span>
+          <h3>規格對照</h3>
+          <p>核對品牌官網、說明書或賣場資訊，標註查詢日期。</p>
+        </div>
+        <div class="method-step">
+          <span class="step-num">03</span>
+          <h3>寫清楚差異</h3>
+          <p>從規格說明各款的強項與限制，讓你依使用情境挑選。</p>
+        </div>
+      </div>
+      <p class="method-limits">編輯依稿件順序排列款式。請按需求比較，售價與庫存以選購當下為準。</p>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>本站含蝦皮分潤連結，透過連結購買我可能獲得分潤，不影響你的價格</p>
+      <div class="footer-inner">
+        <div>
+          <a class="brand" href="index.html">同級之選</a>
+          <p class="tagline">把價位相近的款式放在一起，看各自強在哪裡</p>
+        </div>
+        <nav aria-label="頁尾分類">
+          <a class="chip" href="index.html#cat-appliance">家電</a>
+          <a class="chip" href="index.html#cat-rental">租屋</a>
+          <a class="chip" href="index.html#cat-life">生活</a>
+          <a class="chip" href="index.html#cat-season">季節</a>
+        </nav>
+        <a href="index.html#method">我們怎麼挑 →</a>
+      </div>
+      <div class="footer-meta">
+        <p class="disclosure">本站含蝦皮分潤連結，透過連結購買我可能獲得分潤，不影響你的價格</p>
+        <small>© 2026 同級之選</small>
+      </div>
     </div>
   </footer>
 </body>

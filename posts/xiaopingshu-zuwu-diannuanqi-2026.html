@@ -9,108 +9,321 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-wrap">
-      <div class="brand-row">
+    <div class="header-inner wrap">
+      <div class="brand-block">
         <a class="brand" href="../index.html">同級之選</a>
-        <p class="tagline">把價位相近的款式放在一起，看各自強在哪裡</p>
+        <span class="tagline">把價位相近的款式放在一起，看各自強在哪裡</span>
       </div>
-      <div class="categories" aria-label="文章分類">
-        <span class="chip">全部</span>
-        <span class="chip purple">家電</span>
-        <span class="chip">租屋</span>
-        <span class="chip">生活</span>
-      </div>
+      <nav class="site-nav" aria-label="主導覽">
+        <a class="chip" href="../index.html#categories">全部分類</a>
+        <a class="chip is-current" href="../index.html#cat-appliance">家電</a>
+        <a class="chip" href="../index.html#cat-rental">租屋</a>
+        <a class="chip" href="../index.html#cat-life">生活</a>
+        <a class="chip" href="../index.html#cat-season">季節</a>
+      </nav>
     </div>
   </header>
-  <main class="wrap article-main">
-    <a class="back" href="../index.html">← 返回首頁</a>
-    <article>
-      <header class="article-header">
+
+  <main class="wrap article-layout">
+    <div class="article-body">
+      <nav class="breadcrumb" aria-label="麵包屑">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
+          <li class="breadcrumb-item"><a href="../index.html#cat-appliance">家電</a></li>
+          <li class="breadcrumb-item" aria-current="page">小坪數租屋電暖器怎麼挑？怕跳電先看功率：5 款 2026 冬季比較</li>
+        </ol>
+      </nav>
+
+      <figure class="article-cover">
+        <img src="../images/cover-heater-guide.jpg" alt="冬夜書桌角落的暖光與窗邊暮色，作為本篇電暖器選購指南封面" width="1280" height="720">
+      </figure>
+
+      <header class="article-hero">
         <div class="meta">
           <span class="chip purple">家電</span>
           <span class="chip">租屋</span>
-          <time datetime="2026-11-26">2026-11-26</time>
         </div>
         <h1 class="page-title">小坪數租屋電暖器怎麼挑？怕跳電先看功率：5 款 2026 冬季比較</h1>
+        <div class="byline">
+          <span class="avatar" aria-hidden="true">同</span>
+          <div class="byline-meta">
+            <span class="byline-name">同級之選編輯部</span>
+            <span class="byline-dates">更新日 <time datetime="2026-11-26">2026-11-26</time>　·　價格查詢日 2026-11-26</span>
+          </div>
+        </div>
       </header>
 
-      <section class="article-copy disclosure" aria-label="分潤揭露">
-        <p>11 月底天氣轉濕冷，小坪數套房和宿舍挑電暖器，最常問的不是哪一台最暖，而是開了會不會跳電。以下依 2026 年 11 月 26 日的品牌官網規格整理，沒有實機測試，也不比較銷量。文中的購物連結是蝦皮分潤連結，透過連結購買我可能獲得分潤，不會影響你的價格；實際售價與庫存請以賣場當下為準。</p>
+      <section class="method-note" aria-label="本文怎麼整理">
+        <p><strong>本文怎麼整理。</strong>11 月底天氣轉濕冷，小坪數套房和宿舍挑電暖器，最常問的不是哪一台最暖，而是開了會不會跳電。以下依 2026 年 11 月 26 日的品牌官網規格整理，沒有實機測試，也不比較銷量。文中的購物連結是蝦皮分潤連結，透過連結購買我可能獲得分潤，不會影響你的價格；實際售價與庫存請以賣場當下為準。</p>
       </section>
 
-      <section class="article-prose" aria-labelledby="guide-heading">
-        <h2 id="guide-heading" class="section-title">怎麼挑：先看這幾項規格</h2>
+      <details class="toc toc-mobile">
+        <summary>目錄（8 項）</summary>
+        <nav aria-label="文章目錄">
+          <ol class="toc-list">
+            <li><a href="#points">怎麼挑：先看這幾項規格</a></li>
+            <li><a href="#overview">5 款候選怎麼對照</a></li>
+            <li><a href="#rank-1">1. HX-TF06P</a></li>
+            <li><a href="#rank-2">2. XHH-Y030</a></li>
+            <li><a href="#rank-3">3. JCH-12TDS1</a></li>
+            <li><a href="#rank-4">4. PTC155S</a></li>
+            <li><a href="#rank-5">5. CNI-1000</a></li>
+            <li><a href="#who">適合誰</a></li>
+          </ol>
+        </nav>
+      </details>
+
+      <section class="buying-points article-prose" id="points" aria-labelledby="guide-heading">
+        <header class="section-head">
+          <small class="eyebrow">BUYING GUIDE</small>
+          <h2 id="guide-heading" class="section-title">怎麼挑：先看這幾項規格</h2>
+        </header>
         <p>先想清楚要暖的是「人附近」，還是「這間小房間」。陶瓷式多半用風扇吹熱風，開了比較快感到熱，適合放在書桌、腳邊；也因此會有風扇聲，暖到的範圍通常比較近。對流式靠空氣循環，比較不是對準人吹，適合固定放在同一間房，讓空間慢慢升溫。原廠寫的適用坪數只是參考值，套房隔熱差、常常開關門，不能把數字當成保證。</p>
         <p>接著看功率。台灣一般住宅插座是 110V，常見迴路過電流保護約 15A，換算大約 1,650W，而且是同一條迴路上的插座一起算。這只是常見情況，老公寓、分租套房可能更緊，要以現場為準。一台電暖器開到 1,200W，同一迴路大概只剩約 450W 餘裕，再共用電鍋、熱水壺或吹風機，就很接近跳電。選的時候不但要看最高功率，也要看有沒有較低的檔位。</p>
         <p>經濟部標準檢驗局提醒：電暖器應使用專用插座，不要和其他電器共用同一組插座；如果需要用電源線組，消耗功率不可超過其額定容量。安全功能是基本條件，不是加分。買的時候看機身有沒有商品檢驗標識，以及傾倒斷電、過熱保護。有定時或人體感知，比較能避免出門忘記關，但不能代替人離開時關機並拔插頭。標檢局也提醒：不要在電暖器上覆蓋或烘烤衣物；和窗簾、壁紙、床舖保持距離；不要在密閉空間使用；睡覺時不要讓電暖器近距離面向床邊棉被。</p>
         <p>套房還要看重量、佔地，以及能不能依說明書壁掛。電費算法是：用電量（度）＝千瓦 × 小時。台電表燈非時間非營業電價自 2025 年 10 月 1 日起實施，11 月適用非夏月費率：月用電 121–330 度這一段每度 2.26 元，331–500 度每度 3.13 元。若房東另訂電價，就改用那個數字。下面的例子都是滿載估算，機器若因溫控或人感停轉，實際會較低。600W 開 8 小時約 4.8 度，以每度 2.26 元計約 10.8 元；1,350W 開 8 小時約 10.8 度，約 24.4 元。</p>
       </section>
 
-      <section aria-labelledby="compare-heading">
-        <h2 id="compare-heading" class="section-title">5 款候選怎麼對照</h2>
-        <p class="ranking-note">價格與庫存都以 2026 年 11 月 26 日官網為準，各通路售價會浮動。編號依文章順序，不是實機評測排名。</p>
-        <ol class="product-stack" role="list">
-          <li class="card product-card">
-            <span class="rank-badge" aria-hidden="true">1</span>
-            <h3>聲寶 SAMPO HX-TF06P（陶瓷式，600W）</h3>
-            <div class="copy">
-              <p>官方規格表列出消耗功率 600W，尺寸 141 × 255 × 116 mm（寬 × 高 × 深）。產品頁寫 PTC 陶瓷發熱，有人體感知，偵測無人使用會自動停止；定時關機可選 1、2、4 小時，另有 8 小時強制自動關機、30 秒散熱關機保護、可拆洗濾網，以及可吊掛的仿皮革提繩，並附收納袋。安全方面寫 UL94 V0 阻燃用料，以及傾倒、過熱、異常超溫和異常電流保護。官方規格表沒有列重量和適用坪數。官方建議售價 NT$1,690，頁面註明僅供參考，實際以經銷據點為準。固定 600W，對迴路負擔相對小，比較適合只暖書桌或腳邊，不要當成整間房的暖房機。</p>
-            </div>
-            <div class="product-bottom">
-              <p class="price"><span class="price-label">官網建議售價</span><strong>NT$1,690</strong></p>
-              <a class="btn" href="https://s.shopee.tw/6L6Jn8w78Q" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
-            </div>
-          </li>
-          <li class="card product-card">
-            <span class="rank-badge" aria-hidden="true">2</span>
-            <h3>±0 正負零 XHH-Y030（陶瓷式，台灣 60Hz 為 550W／1,100W）</h3>
-            <div class="copy">
-              <p>台灣電網是 60Hz。官網規格圖寫：60Hz 時強檔 1,100W、弱檔 550W；50Hz 才是強 1,200W、弱 600W。部分通路寫 1,200W／600W，那是 50Hz 的數字。適用坪數寫 3–5 坪內；尺寸約高 30 × 寬 29 × 深 11.5 cm，重量約 2.6 kg，電線約 1.7 m，定時關機 1、3、6 小時，陶瓷發熱體，產地中國。商品頁另寫可搬移、可調葉片角度，機器顛倒會自動關閉。台灣官網售價 NT$2,690，查詢當天顯示尚無庫存。機身較薄，有低檔 550W 和官方坪數標示；沒有遙控，規格圖也沒另列人體感知。</p>
-            </div>
-            <div class="product-bottom">
-              <p class="price"><span class="price-label">官網售價・查詢當天無庫存</span><strong>NT$2,690</strong></p>
-              <a class="btn" href="https://s.shopee.tw/6VPjzRvTnT" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
-            </div>
-          </li>
-          <li class="card product-card">
-            <span class="rank-badge" aria-hidden="true">3</span>
-            <h3>IRIS OHYAMA JCH-12TDS1（陶瓷式，600W／1,000W／1,200W）</h3>
-            <div class="copy">
-              <p>台灣官網品名是「大範圍 Slim Type 人感陶瓷電暖器」。官網圖寫三種模式：強力 1,200W、標準 1,000W、靜音 600W。人感可設 90 秒、5 分鐘或 10 分鐘，設定時間內沒感測到人體會切斷電源，之後再感應到人會恢復運轉；人體感應距離寫 2 m。另有 1 小時／2 小時定時、兒童鎖（長按 3 秒）、傾倒或傾斜會停止（扶正後要按電源鍵重開）、過熱自動斷電。比較表寫重量 2.7 kg，尺寸 17.5 × 19.15 × 37.1 cm（長 × 寬 × 高），可手動調整風向。BSMI 合格字號 R3C764。</p>
-              <p>官網寫暖風到達約 2 m，測試條件是室溫 21℃±1℃、約 6 坪實驗室、強力模式、AC100V／50Hz；台灣是 110V／60Hz，官網沒說明功率會不會不同。官網圖有洗手間、更衣室場景，但沒公布 IP 防水等級，不能把它當浴室機。圖上並註明就寢時請將電源關閉。官網當天顯示售價 NT$2,299，同一筆商品資料另有標價 NT$5,499，下單前以當下顯示為準。開強力 1,200W 時仍要留迴路餘裕。</p>
-            </div>
-            <div class="product-bottom">
-              <p class="price"><span class="price-label">官網同時列出兩個價格</span><strong>NT$2,299／NT$5,499</strong></p>
-              <a class="btn" href="https://s.shopee.tw/6fjABkuqSW" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
-            </div>
-          </li>
-          <li class="card product-card">
-            <span class="rank-badge" aria-hidden="true">4</span>
-            <h3>北方 PTC155S（陶瓷式，900W／1,350W）</h3>
-            <div class="copy">
-              <p>官方寫消耗功率 1,350W，四段模式為送風、低溫 900W、高溫 1,350W、節能恆溫（可設 20–40℃）。淨重約 1.8 kg，尺寸約高 70 × 寬 24.5 × 深 24.5 cm，有紅外線遙控、左右擺動、1–12 小時預約關機、傾倒／超溫自動斷電、前網防燙材質，保固 1 年。官方沒列適用坪數。官網售價 NT$2,980，查詢當天顯示售完。重量輕，有遙控和 900W 低檔；高檔 1,350W 已接近常見 15A 迴路上限，不要和其他高功率電器共用同一迴路。</p>
-            </div>
-            <div class="product-bottom">
-              <p class="price"><span class="price-label">官網售價・查詢當天售完</span><strong>NT$2,980</strong></p>
-              <a class="btn" href="https://s.shopee.tw/6q2aO3uD7Z" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
-            </div>
-          </li>
-          <li class="card product-card">
-            <span class="rank-badge" aria-hidden="true">5</span>
-            <h3>北方 CNI-1000（對流式，1,000W）</h3>
-            <div class="copy">
-              <p>這是五款裡唯一的對流式。官方寫消耗功率 1,000W，適用 3–5 坪，溫度可設 12–30℃，淨重約 3.95 kg，尺寸約高 40 × 寬 55 × 深 14 cm，生產國別為保加利亞（德國團隊研發設計），保固 3 年。功能包括 LED 顯示、IP24 防潑水檢測、1–24 小時預約開關機、睡眠模式、傾倒自動斷電。官網售價 NT$7,580，查詢當天顯示售完。官網標房間、浴室兩用，且有 IP24；防潑水不是可以沖水，安裝位置和離水距離仍要照說明書。官網售價明顯高於前面幾台陶瓷機，機身也比較重。</p>
-            </div>
-            <div class="product-bottom">
-              <p class="price"><span class="price-label">官網售價・查詢當天售完</span><strong>NT$7,580</strong></p>
-              <a class="btn" href="https://s.shopee.tw/70M0aMtZmc" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
-            </div>
-          </li>
-        </ol>
+      <section class="overview" id="overview" aria-labelledby="compare-heading">
+        <header class="section-head">
+          <small class="eyebrow">AT A GLANCE</small>
+          <h2 id="compare-heading" class="section-title">5 款候選怎麼對照</h2>
+        </header>
+        <p class="overview-note">價格與庫存都以 2026 年 11 月 26 日官網為準，各通路售價會浮動。編號依文章順序，不是實機評測排名。</p>
+        <p class="disclosure">本站含蝦皮分潤連結，透過連結購買我可能獲得分潤，不影響你的價格</p>
+        <p class="scroll-hint">← 左右滑動看更多 →</p>
+        <div class="table-scroll">
+          <table class="compare-table">
+            <caption>規格與官網售價對照</caption>
+            <thead>
+              <tr>
+                <th scope="col">商品</th>
+                <th scope="col">官網價格</th>
+                <th scope="col">類型</th>
+                <th scope="col">消耗功率</th>
+                <th scope="col">安全功能</th>
+                <th scope="col">查看</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="col-product"><a href="#rank-1">1. 聲寶 SAMPO HX-TF06P</a></th>
+                <td>NT$1,690</td>
+                <td>陶瓷式</td>
+                <td>600W</td>
+                <td>傾倒、過熱、異常超溫及異常電流保護</td>
+                <td><a href="#rank-1">看詳細</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="col-product"><a href="#rank-2">2. ±0 正負零 XHH-Y030</a></th>
+                <td>NT$2,690</td>
+                <td>陶瓷式</td>
+                <td>550W／1,100W（台灣 60Hz）</td>
+                <td>顛倒自動關閉</td>
+                <td><a href="#rank-2">看詳細</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="col-product"><a href="#rank-3">3. IRIS OHYAMA JCH-12TDS1</a></th>
+                <td>NT$2,299、<br>NT$5,499</td>
+                <td>陶瓷式</td>
+                <td>600W／1,000W／1,200W</td>
+                <td>兒童鎖、傾倒或傾斜停止、過熱斷電</td>
+                <td><a href="#rank-3">看詳細</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="col-product"><a href="#rank-4">4. 北方 PTC155S</a></th>
+                <td>NT$2,980</td>
+                <td>陶瓷式</td>
+                <td>900W／1,350W</td>
+                <td>傾倒／超溫自動斷電</td>
+                <td><a href="#rank-4">看詳細</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="col-product"><a href="#rank-5">5. 北方 CNI-1000</a></th>
+                <td>NT$7,580</td>
+                <td>對流式</td>
+                <td>1,000W</td>
+                <td>IP24 防潑水、傾倒自動斷電</td>
+                <td><a href="#rank-5">看詳細</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section class="article-prose" aria-labelledby="who-heading">
-        <h2 id="who-heading" class="section-title">適合誰</h2>
+      <section class="rank-list" aria-labelledby="ranking-heading">
+        <header class="section-head">
+          <small class="eyebrow">MODEL GUIDE</small>
+          <h2 id="ranking-heading" class="section-title">逐款比較</h2>
+        </header>
+
+        <article class="card rank-card rank-card--top" id="rank-1">
+          <div class="rank-ribbon">編輯排序 No.1</div>
+          <div class="rank-card-head">
+            <span class="rank-badge" aria-hidden="true">1</span>
+            <div>
+              <p class="product-brand">聲寶 SAMPO</p>
+              <h3 class="product-name">HX-TF06P</h3>
+            </div>
+            <span class="tag">陶瓷式</span>
+          </div>
+          <div class="rank-content">
+            <div class="rank-side">
+              <div class="product-media illustration"><small>示意圖</small></div>
+              <div class="price-box">
+                <small>官網建議售價</small>
+                <strong class="price-range">NT$1,690</strong>
+                <p>頁面註明僅供參考，實際以經銷據點為準。</p>
+                <small class="price-date">查詢日 2026-11-26</small>
+              </div>
+              <div class="rank-actions">
+                <a class="btn-primary" href="https://s.shopee.tw/6L6Jn8w78Q" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
+                <a class="btn-secondary" href="#overview">回到總覽表 ↑</a>
+              </div>
+            </div>
+            <div>
+              <h4 class="rank-summary">聲寶 SAMPO HX-TF06P（陶瓷式，600W）</h4>
+              <dl class="spec-table"><dt>類型</dt><dd>陶瓷式</dd><dt>消耗功率</dt><dd>600W</dd><dt>機身尺寸</dt><dd>141 × 255 × 116 mm（寬 × 高 × 深）</dd><dt>定時</dt><dd>1、2、4 小時</dd><dt>安全功能</dt><dd>傾倒、過熱、異常超溫和異常電流保護</dd></dl>
+              <div class="rank-copy"><p>官方規格表列出消耗功率 600W，尺寸 141 × 255 × 116 mm（寬 × 高 × 深）。產品頁寫 PTC 陶瓷發熱，有人體感知，偵測無人使用會自動停止；定時關機可選 1、2、4 小時，另有 8 小時強制自動關機、30 秒散熱關機保護、可拆洗濾網，以及可吊掛的仿皮革提繩，並附收納袋。安全方面寫 UL94 V0 阻燃用料，以及傾倒、過熱、異常超溫和異常電流保護。官方規格表沒有列重量和適用坪數。官方建議售價 NT$1,690，頁面註明僅供參考，實際以經銷據點為準。固定 600W，對迴路負擔相對小，比較適合只暖書桌或腳邊，不要當成整間房的暖房機。</p></div>
+              <p class="rank-card-foot">規格來源：品牌官網</p>
+            </div>
+          </div>
+        </article>
+        <article class="card rank-card" id="rank-2">
+          
+          <div class="rank-card-head">
+            <span class="rank-badge" aria-hidden="true">2</span>
+            <div>
+              <p class="product-brand">±0 正負零</p>
+              <h3 class="product-name">XHH-Y030</h3>
+            </div>
+            <span class="tag">陶瓷式</span>
+          </div>
+          <div class="rank-content">
+            <div class="rank-side">
+              <div class="product-media illustration"><small>示意圖</small></div>
+              <div class="price-box">
+                <small>官網售價・查詢當天無庫存</small>
+                <strong class="price-range">NT$2,690</strong>
+                <p>台灣官網售價，查詢當天顯示尚無庫存。</p>
+                <small class="price-date">查詢日 2026-11-26</small>
+              </div>
+              <div class="rank-actions">
+                <a class="btn-primary" href="https://s.shopee.tw/6VPjzRvTnT" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
+                <a class="btn-secondary" href="#overview">回到總覽表 ↑</a>
+              </div>
+            </div>
+            <div>
+              <h4 class="rank-summary">±0 正負零 XHH-Y030（陶瓷式，台灣 60Hz 為 550W／1,100W）</h4>
+              <dl class="spec-table"><dt>類型</dt><dd>陶瓷式</dd><dt>消耗功率</dt><dd>550W／1,100W（台灣 60Hz）</dd><dt>機身尺寸</dt><dd>約高 30 × 寬 29 × 深 11.5 cm</dd><dt>重量</dt><dd>約 2.6 kg</dd><dt>定時</dt><dd>1、3、6 小時</dd><dt>安全功能</dt><dd>機器顛倒會自動關閉</dd></dl>
+              <div class="rank-copy"><p>台灣電網是 60Hz。官網規格圖寫：60Hz 時強檔 1,100W、弱檔 550W；50Hz 才是強 1,200W、弱 600W。部分通路寫 1,200W／600W，那是 50Hz 的數字。適用坪數寫 3–5 坪內；尺寸約高 30 × 寬 29 × 深 11.5 cm，重量約 2.6 kg，電線約 1.7 m，定時關機 1、3、6 小時，陶瓷發熱體，產地中國。商品頁另寫可搬移、可調葉片角度，機器顛倒會自動關閉。台灣官網售價 NT$2,690，查詢當天顯示尚無庫存。機身較薄，有低檔 550W 和官方坪數標示；沒有遙控，規格圖也沒另列人體感知。</p></div>
+              <p class="rank-card-foot">規格來源：品牌官網</p>
+            </div>
+          </div>
+        </article>
+        <article class="card rank-card" id="rank-3">
+          
+          <div class="rank-card-head">
+            <span class="rank-badge" aria-hidden="true">3</span>
+            <div>
+              <p class="product-brand">IRIS OHYAMA</p>
+              <h3 class="product-name">JCH-12TDS1</h3>
+            </div>
+            <span class="tag">陶瓷式</span>
+          </div>
+          <div class="rank-content">
+            <div class="rank-side">
+              <div class="product-media illustration"><small>示意圖</small></div>
+              <div class="price-box">
+                <small>官網同時列出兩個價格</small>
+                <strong class="price-range">NT$2,299／NT$5,499</strong>
+                <p>下單前以當下顯示為準。</p>
+                <small class="price-date">查詢日 2026-11-26</small>
+              </div>
+              <div class="rank-actions">
+                <a class="btn-primary" href="https://s.shopee.tw/6fjABkuqSW" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
+                <a class="btn-secondary" href="#overview">回到總覽表 ↑</a>
+              </div>
+            </div>
+            <div>
+              <h4 class="rank-summary">IRIS OHYAMA JCH-12TDS1（陶瓷式，600W／1,000W／1,200W）</h4>
+              <dl class="spec-table"><dt>類型</dt><dd>陶瓷式</dd><dt>消耗功率</dt><dd>600W／1,000W／1,200W</dd><dt>機身尺寸</dt><dd>17.5 × 19.15 × 37.1 cm（長 × 寬 × 高）</dd><dt>重量</dt><dd>2.7 kg</dd><dt>定時</dt><dd>1 小時／2 小時</dd><dt>安全功能</dt><dd>兒童鎖、傾倒或傾斜停止、過熱自動斷電</dd></dl>
+              <div class="rank-copy"><p>台灣官網品名是「大範圍 Slim Type 人感陶瓷電暖器」。官網圖寫三種模式：強力 1,200W、標準 1,000W、靜音 600W。人感可設 90 秒、5 分鐘或 10 分鐘，設定時間內沒感測到人體會切斷電源，之後再感應到人會恢復運轉；人體感應距離寫 2 m。另有 1 小時／2 小時定時、兒童鎖（長按 3 秒）、傾倒或傾斜會停止（扶正後要按電源鍵重開）、過熱自動斷電。比較表寫重量 2.7 kg，尺寸 17.5 × 19.15 × 37.1 cm（長 × 寬 × 高），可手動調整風向。BSMI 合格字號 R3C764。</p><p>官網寫暖風到達約 2 m，測試條件是室溫 21℃±1℃、約 6 坪實驗室、強力模式、AC100V／50Hz；台灣是 110V／60Hz，官網沒說明功率會不會不同。官網圖有洗手間、更衣室場景，但沒公布 IP 防水等級，不能把它當浴室機。圖上並註明就寢時請將電源關閉。官網當天顯示售價 NT$2,299，同一筆商品資料另有標價 NT$5,499，下單前以當下顯示為準。開強力 1,200W 時仍要留迴路餘裕。</p></div>
+              <p class="rank-card-foot">規格來源：品牌官網</p>
+            </div>
+          </div>
+        </article>
+        <article class="card rank-card" id="rank-4">
+          
+          <div class="rank-card-head">
+            <span class="rank-badge" aria-hidden="true">4</span>
+            <div>
+              <p class="product-brand">北方</p>
+              <h3 class="product-name">PTC155S</h3>
+            </div>
+            <span class="tag">陶瓷式</span>
+          </div>
+          <div class="rank-content">
+            <div class="rank-side">
+              <div class="product-media illustration"><small>示意圖</small></div>
+              <div class="price-box">
+                <small>官網售價・查詢當天售完</small>
+                <strong class="price-range">NT$2,980</strong>
+                <p>官網售價，查詢當天顯示售完。</p>
+                <small class="price-date">查詢日 2026-11-26</small>
+              </div>
+              <div class="rank-actions">
+                <a class="btn-primary" href="https://s.shopee.tw/6q2aO3uD7Z" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
+                <a class="btn-secondary" href="#overview">回到總覽表 ↑</a>
+              </div>
+            </div>
+            <div>
+              <h4 class="rank-summary">北方 PTC155S（陶瓷式，900W／1,350W）</h4>
+              <dl class="spec-table"><dt>類型</dt><dd>陶瓷式</dd><dt>消耗功率</dt><dd>900W／1,350W</dd><dt>機身尺寸</dt><dd>約高 70 × 寬 24.5 × 深 24.5 cm</dd><dt>重量</dt><dd>約 1.8 kg</dd><dt>定時</dt><dd>1–12 小時預約關機</dd><dt>安全功能</dt><dd>傾倒／超溫自動斷電</dd></dl>
+              <div class="rank-copy"><p>官方寫消耗功率 1,350W，四段模式為送風、低溫 900W、高溫 1,350W、節能恆溫（可設 20–40℃）。淨重約 1.8 kg，尺寸約高 70 × 寬 24.5 × 深 24.5 cm，有紅外線遙控、左右擺動、1–12 小時預約關機、傾倒／超溫自動斷電、前網防燙材質，保固 1 年。官方沒列適用坪數。官網售價 NT$2,980，查詢當天顯示售完。重量輕，有遙控和 900W 低檔；高檔 1,350W 已接近常見 15A 迴路上限，不要和其他高功率電器共用同一迴路。</p></div>
+              <p class="rank-card-foot">規格來源：品牌官網</p>
+            </div>
+          </div>
+        </article>
+        <article class="card rank-card" id="rank-5">
+          
+          <div class="rank-card-head">
+            <span class="rank-badge" aria-hidden="true">5</span>
+            <div>
+              <p class="product-brand">北方</p>
+              <h3 class="product-name">CNI-1000</h3>
+            </div>
+            <span class="tag">對流式</span>
+          </div>
+          <div class="rank-content">
+            <div class="rank-side">
+              <div class="product-media illustration"><small>示意圖</small></div>
+              <div class="price-box">
+                <small>官網售價・查詢當天售完</small>
+                <strong class="price-range">NT$7,580</strong>
+                <p>官網售價，查詢當天顯示售完。</p>
+                <small class="price-date">查詢日 2026-11-26</small>
+              </div>
+              <div class="rank-actions">
+                <a class="btn-primary" href="https://s.shopee.tw/70M0aMtZmc" rel="sponsored nofollow noopener" target="_blank">到蝦皮看實際售價</a>
+                <a class="btn-secondary" href="#overview">回到總覽表 ↑</a>
+              </div>
+            </div>
+            <div>
+              <h4 class="rank-summary">北方 CNI-1000（對流式，1,000W）</h4>
+              <dl class="spec-table"><dt>類型</dt><dd>對流式</dd><dt>消耗功率</dt><dd>1,000W</dd><dt>機身尺寸</dt><dd>約高 40 × 寬 55 × 深 14 cm</dd><dt>重量</dt><dd>約 3.95 kg</dd><dt>適用坪數</dt><dd>3–5 坪</dd><dt>安全功能</dt><dd>IP24 防潑水檢測、傾倒自動斷電</dd></dl>
+              <div class="rank-copy"><p>這是五款裡唯一的對流式。官方寫消耗功率 1,000W，適用 3–5 坪，溫度可設 12–30℃，淨重約 3.95 kg，尺寸約高 40 × 寬 55 × 深 14 cm，生產國別為保加利亞（德國團隊研發設計），保固 3 年。功能包括 LED 顯示、IP24 防潑水檢測、1–24 小時預約開關機、睡眠模式、傾倒自動斷電。官網售價 NT$7,580，查詢當天顯示售完。官網標房間、浴室兩用，且有 IP24；防潑水不是可以沖水，安裝位置和離水距離仍要照說明書。官網售價明顯高於前面幾台陶瓷機，機身也比較重。</p></div>
+              <p class="rank-card-foot">規格來源：品牌官網</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="article-prose" id="who" aria-labelledby="who-heading">
+        <header class="section-head">
+          <small class="eyebrow">WHO IT SUITS</small>
+          <h2 id="who-heading" class="section-title">適合誰</h2>
+        </header>
         <ul>
           <li>只暖書桌或腳邊、對迴路比較沒把握：聲寶 HX-TF06P（固定 600W，有人感和 8 小時強制關機）。官方沒寫適用坪數，不要期待它暖整間房。</li>
           <li>要低檔 550W、官方寫 3–5 坪、機身較薄：±0 XHH-Y030。官網當時無庫存，買前先確認現貨，以及通路標的是 60Hz 還是 50Hz 功率。</li>
@@ -120,11 +333,59 @@
         </ul>
         <p>用法比型號重要：專用插座、不要烘衣、留安全距離，人走就關並拔插頭。</p>
       </section>
-    </article>
+
+      <section class="related" id="related">
+        <header class="section-head">
+          <small class="eyebrow">EXPLORE</small>
+          <h2 class="section-title">相關文章</h2>
+        </header>
+        <div class="related-empty">
+          <p>看其他分類</p>
+          <div>
+            <a class="chip" href="../index.html#cat-appliance">家電</a>
+            <a class="chip" href="../index.html#cat-rental">租屋</a>
+            <a class="chip" href="../index.html#cat-life">生活</a>
+            <a class="chip" href="../index.html#cat-season">季節</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="toc toc-aside" aria-label="文章目錄">
+      <small class="eyebrow">CONTENTS</small>
+      <p class="toc-title">文章目錄</p>
+      <ol class="toc-list">
+        <li><a href="#points">怎麼挑：先看這幾項規格</a></li>
+        <li><a href="#overview">5 款候選怎麼對照</a></li>
+        <li><a href="#rank-1">1. HX-TF06P</a></li>
+        <li><a href="#rank-2">2. XHH-Y030</a></li>
+        <li><a href="#rank-3">3. JCH-12TDS1</a></li>
+        <li><a href="#rank-4">4. PTC155S</a></li>
+        <li><a href="#rank-5">5. CNI-1000</a></li>
+        <li><a href="#who">適合誰</a></li>
+      </ol>
+    </aside>
   </main>
+
   <footer class="site-footer">
     <div class="wrap">
-      <p>本站含蝦皮分潤連結，透過連結購買我可能獲得分潤，不影響你的價格</p>
+      <div class="footer-inner">
+        <div>
+          <a class="brand" href="../index.html">同級之選</a>
+          <p class="tagline">把價位相近的款式放在一起，看各自強在哪裡</p>
+        </div>
+        <nav aria-label="頁尾分類">
+          <a class="chip" href="../index.html#cat-appliance">家電</a>
+          <a class="chip" href="../index.html#cat-rental">租屋</a>
+          <a class="chip" href="../index.html#cat-life">生活</a>
+          <a class="chip" href="../index.html#cat-season">季節</a>
+        </nav>
+        <a href="../index.html#method">我們怎麼挑 →</a>
+      </div>
+      <div class="footer-meta">
+        <p class="disclosure">本站含蝦皮分潤連結，透過連結購買我可能獲得分潤，不影響你的價格</p>
+        <small>© 2026 同級之選</small>
+      </div>
     </div>
   </footer>
 </body>
