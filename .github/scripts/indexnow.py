@@ -26,7 +26,17 @@ JOB_HTTP_TIMEOUT = 20
 
 ROOT = Path(__file__).resolve().parents[2]
 NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-NOINDEX = re.compile(rb"\bnoindex\b", re.IGNORECASE)
+TAG_ATTRIBUTES = rb"""(?:[^"'<>]|"[^"]*"|'[^']*')*"""
+NOINDEX = re.compile(
+    # Skip comments before looking for a robots meta tag.
+    rb"""\A(?:[^<]*<(?:!--(?:(?!-->).)*-->|(?!\!--)))*?[^<]*"""
+    rb"""<meta(?=\s)"""
+    rb"""(?=%s\sname\s*=\s*(["']?)robots\1(?=\s|/?>))"""
+    rb"""(?=%s\scontent\s*=\s*(?:"(?:[^"]*[\s,])?noindex(?=[\s,"])"""
+    rb"""|'(?:[^']*[\s,])?noindex(?=[\s,'])|noindex(?=\s|>)))"""
+    rb"""%s>""" % (TAG_ATTRIBUTES, TAG_ATTRIBUTES, TAG_ATTRIBUTES),
+    re.IGNORECASE | re.DOTALL,
+)
 NETWORK_ERRORS = (OSError, urllib.error.URLError, http.client.HTTPException, EOFError)
 
 

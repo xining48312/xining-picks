@@ -445,6 +445,7 @@ td { vertical-align:middle }
 .quick-list .quick-stock.is-out { color: var(--c-notice); background: var(--c-notice-bg); }
 .quick-note { margin-top: 8px; color: var(--c-muted); font-size: var(--fs-sm); overflow-wrap: anywhere; }
 .quick-list a { font-size: 15px; font-weight: 700; color: var(--c-primary-deep); }
+.quick-list a .model-code { color: inherit; font-size: inherit; }
 .toc-aside a[aria-current="true"] { border-left: 3px solid var(--c-primary); padding-left: 8px; color: var(--c-primary-deep); }
 tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
 @media (min-width: 42rem) {
@@ -630,6 +631,7 @@ tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
   text-decoration: none;
   color: inherit;
 }
+.compare-cards a:has(.model-code) { grid-template-columns: 36px minmax(min-content, 1fr) auto; }
 .compare-cards a:hover, .compare-cards a:focus-visible { background: var(--c-surface-2); }
 .compare-cards img { grid-area: img; width: 36px; height: 36px; object-fit: contain; background: #fff; border: 1px solid var(--c-line); border-radius: 8px; margin-top: 2px; }
 .compare-cards .name { grid-area: name; font-weight: 700; color: var(--c-secondary); line-height: 1.35; }
