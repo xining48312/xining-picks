@@ -162,21 +162,13 @@ main section + section,.article-body>section,.article-end { margin-top:40px }
 summary { cursor:pointer; font-weight:700 }
 .toc-list { list-style:none; padding:0; margin-top:10px }
 .toc-list a { display:block; padding:5px 0; font-size:14px; text-decoration:none }
-.table-scroll { overflow-x:auto; background:white; border:1px solid var(--c-line); border-radius:12px }
-table { border-spacing:0; width:100%; min-width:860px; font-size:14px }
+.table-scroll { background:white; border:1px solid var(--c-line); border-radius:12px }
+table { border-spacing:0; width:100%; font-size:14px }
 caption { text-align:left; padding:12px; font-weight:700 }
 th,td { padding:12px; border-top:1px solid var(--c-line); text-align:left }
 thead th { background:var(--c-th-bg) }
-tr th:first-child { position:sticky; left:0; background:var(--c-th-bg); width:145px; box-shadow:2px 0 3px var(--c-line) }
 td { vertical-align:middle }
-td:nth-child(2) { min-width:7.5em; text-align:right }
-td:nth-child(2),td:nth-child(4) { font-variant-numeric:tabular-nums }
-td:nth-child(2),td:nth-child(3),td:nth-child(4),td:last-child,thead th { white-space:nowrap }
-td:nth-child(5) { min-width:13em }
-td:nth-child(6) { min-width:9em }
-td:last-child { text-align:center }
-td:last-child a { display:inline-flex; padding:4px 10px; border:1px solid var(--c-primary-line); border-radius:999px; font-size:13px; font-weight:700; text-decoration:none; color:var(--c-primary-deep) }
-.scroll-hint { display:block; margin:10px 0 }
+.scroll-hint { display:none }
 .rank-card { padding:clamp(16px,2vw,26px); margin-top:24px }
 .rank-ribbon { background:var(--grad-band); color:white; border-radius:7px; padding:4px 12px; width:fit-content; font-size:13px }
 .rank-card-head,.rank-actions { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin:14px 0 }
@@ -203,10 +195,8 @@ td:last-child a { display:inline-flex; padding:4px 10px; border:1px solid var(--
  .rank-side .product-media { width:104px; height:104px; margin:0 }
  .rank-side .price-box { margin:0; overflow-wrap:anywhere }
  .illustration small { font-size:10px }
- tr th:first-child { width:112px; min-width:112px; max-width:112px; font-size:13px; overflow-wrap:anywhere }
  th,td { padding:10px }
  caption { font-size:13px; padding:10px 12px }
- .scroll-hint { margin:4px 0 8px; font-size:12px }
  .site-nav .chip { flex:none; min-height:36px; align-items:center; padding:6px 14px }
 }
 @media(min-width:42rem) {
@@ -440,9 +430,6 @@ td:last-child a { display:inline-flex; padding:4px 10px; border:1px solid var(--
 .quick-list a { font-size: 15px; font-weight: 700; color: var(--c-primary-deep); }
 .toc-aside a[aria-current="true"] { border-left: 3px solid var(--c-primary); padding-left: 8px; color: var(--c-primary-deep); }
 tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
-@media (max-width: 41.99rem) {
-  .table-scroll { mask-image: linear-gradient(to right, var(--c-ink) calc(100% - 12px), transparent); }
-}
 @media (min-width: 42rem) {
   .quick-list li { grid-template-columns: minmax(10em,1fr) 2fr; gap: 12px; }
   .know-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
@@ -491,21 +478,6 @@ tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
   display: block;
   background: #fff;
 }
-.table-thumb {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  vertical-align: middle;
-  margin: 0 8px 0 0;
-  background: #fff;
-  border: 1px solid var(--c-line);
-  border-radius: 8px;
-}
-.col-product {
-  white-space: nowrap;
-}
-.col-product .table-thumb { float: left; }
-.col-product a { overflow-wrap: anywhere; white-space: normal; }
 @media (min-width: 64rem) {
   .rank-side .product-media.packshot {
     aspect-ratio: 1 / 1;
@@ -513,3 +485,144 @@ tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
   }
 }
 .article-cover.cover-closeup img { object-position: center; }
+
+/* Comparison tables: no fixed min-width, no horizontal scroll */
+.compare-wrap {
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.compare-table {
+  width: 100%;
+  min-width: 0;
+  font-size: 14px;
+}
+.compare-table caption {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 700;
+  color: var(--c-heading);
+  background: var(--c-surface);
+  caption-side: top;
+}
+.compare-table th, .compare-table td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--c-line);
+  text-align: left;
+  vertical-align: middle;
+}
+.compare-table thead th {
+  background: var(--c-th-bg);
+  font-size: 13px;
+  font-weight: 700;
+  color: #3a4d63;
+  white-space: nowrap;
+}
+.compare-table .col-product { width: 34%; }
+.compare-product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.compare-product img,
+.compare-table .table-thumb {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-radius: 8px;
+  flex: none;
+  float: none;
+  margin: 0;
+}
+.compare-product a {
+  color: var(--c-secondary);
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.3;
+}
+.compare-product a:hover { color: var(--c-primary-deep); text-decoration: underline; }
+.compare-product .brand {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-muted);
+}
+.compare-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.compare-table .tag,
+.compare-stock {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  background: var(--c-surface-2);
+  color: #3a4d63;
+  border: 1px solid var(--c-line);
+}
+.compare-stock {
+  margin-left: 6px;
+  background: #f3f5f8;
+  color: var(--c-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.compare-table .price {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  color: var(--c-primary-deep);
+  white-space: nowrap;
+}
+.compare-table thead th.compare-price,
+.compare-table td.price { text-align: right; }
+.compare-table .muted-cell { color: var(--c-muted); font-weight: 600; }
+.table-footnotes {
+  margin: 0;
+  padding: 10px 16px 14px;
+  color: var(--c-muted);
+  font-size: 12px;
+  line-height: 1.65;
+  border-top: 1px solid var(--c-line);
+}
+.compare-cards { display: none; list-style: none; padding: 0; margin: 0; }
+.cards-caption { display: none; }
+.compare-cards a {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  grid-template-areas:
+    "img name price"
+    "img specs specs"
+    "img extra extra";
+  gap: 2px 10px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--c-line);
+  text-decoration: none;
+  color: inherit;
+}
+.compare-cards a:hover, .compare-cards a:focus-visible { background: var(--c-surface-2); }
+.compare-cards img { grid-area: img; width: 36px; height: 36px; object-fit: contain; background: #fff; border: 1px solid var(--c-line); border-radius: 8px; margin-top: 2px; }
+.compare-cards .name { grid-area: name; font-weight: 700; color: var(--c-secondary); line-height: 1.35; }
+.compare-cards .price { grid-area: price; align-self: start; font-variant-numeric: tabular-nums; font-weight: 800; color: var(--c-primary-deep); white-space: nowrap; }
+.compare-cards .specs { grid-area: specs; font-size: 13px; color: #3a4d63; }
+.compare-cards .extra { grid-area: extra; font-size: 13px; color: #3a4d63; }
+@media (max-width: 41.99rem) {
+  .compare-table { display: none; }
+  .compare-cards { display: block; }
+  .cards-caption {
+    display: block;
+    padding: 12px 14px 4px;
+    font-weight: 700;
+    color: var(--c-heading);
+  }
+  .table-scroll { overflow: visible; }
+}
+@media (min-width: 42rem) {
+  .cards-caption, .compare-cards { display: none; }
+}
