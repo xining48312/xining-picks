@@ -607,6 +607,14 @@ tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
   line-height: 1.65;
   border-top: 1px solid var(--c-line);
 }
+.shopee-price-note {
+  margin: 0;
+  padding: 8px 16px 0;
+  color: var(--c-muted);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
 .compare-cards { display: none; list-style: none; padding: 0; margin: 0; }
 .cards-caption { display: none; }
 .compare-cards a {
@@ -625,7 +633,9 @@ tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
 .compare-cards a:hover, .compare-cards a:focus-visible { background: var(--c-surface-2); }
 .compare-cards img { grid-area: img; width: 36px; height: 36px; object-fit: contain; background: #fff; border: 1px solid var(--c-line); border-radius: 8px; margin-top: 2px; }
 .compare-cards .name { grid-area: name; font-weight: 700; color: var(--c-secondary); line-height: 1.35; }
-.compare-cards .price { grid-area: price; align-self: start; font-variant-numeric: tabular-nums; font-weight: 800; color: var(--c-primary-deep); white-space: nowrap; }
+.compare-cards .name,
+.compare-cards .price { min-inline-size: 0; }
+.compare-cards .price { grid-area: price; align-self: start; justify-self: end; text-align: right; font-variant-numeric: tabular-nums; font-weight: 800; color: var(--c-primary-deep); white-space: nowrap; }
 .compare-cards .specs { grid-area: specs; font-size: 13px; color: #3a4d63; }
 .compare-cards .extra { grid-area: extra; font-size: 13px; color: #3a4d63; }
 @media (max-width: 41.99rem) {
@@ -683,7 +693,7 @@ tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
   white-space: normal;
   overflow-wrap: anywhere;
 }
-.compare-cards .price-with-source { max-inline-size: min(8rem, 32vw); }
+.compare-cards .price-with-source { max-inline-size: min(11.5rem, 48vw); }
 .price-source,
 .quick-list .price-source {
   display: inline-block;
