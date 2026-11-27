@@ -1,0 +1,46 @@
+name: IndexNow
+on:
+  push:
+    branches: [main]
+    paths: ["*.html", "**/*.html", "sitemap.xml"]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "送出 sitemap 全部網址"
+        type: boolean
+        default: true
+      dry_run:
+        description: "只列出網址，不送出"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Notify IndexNow
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+          ALL: ${{ inputs.all }}
+          DRY: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          extra=""
+          if [ "${DRY:-false}" = "true" ]; then
+            extra="--dry-run"
+          fi
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            python3 .github/scripts/indexnow.py --all $extra
+          else
+            python3 .github/scripts/indexnow.py --before "$BEFORE" --after "$AFTER" $extra
+          fi
