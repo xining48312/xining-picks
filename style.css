@@ -106,7 +106,7 @@ main section + section,.article-body>section,.article-end { margin-top:40px }
 .category-grid { grid-template-columns:repeat(2,minmax(0,1fr)) }
 .category-card,.post-card,.post-row,.rank-card,.toc-aside,.toc-mobile,.point-item,.method-steps,.related-empty { background:white; border:1px solid var(--c-line); border-radius:var(--radius-card); box-shadow:var(--shadow-card) }
 .category-card { display:grid; justify-items:start; padding:18px; text-decoration:none; position:relative; gap:4px }
-.category-card .tag { position:absolute; top:14px; right:10px }
+.category-count.category-pending { color: var(--c-muted); }
 .category-card strong { color:var(--c-heading); font-size:18px }
 .category-icon { display:grid; place-items:center; width:48px; height:48px; border-radius:50%; background:var(--c-primary-soft); color:var(--c-primary-deep); margin-bottom:6px }
 .category-icon svg { width:26px }
@@ -262,6 +262,7 @@ td:last-child a { display:inline-flex; padding:4px 10px; border:1px solid var(--
   display: block;
 }
 .category-card {
+  align-content: start;
   padding: 0 0 16px;
   overflow: hidden;
 }
@@ -336,3 +337,133 @@ td:last-child a { display:inline-flex; padding:4px 10px; border:1px solid var(--
 .rank-copy p { margin: 0 0 10px; }
 .rank-copy p:last-child { margin: 0; }
 .post-price-band { margin: 8px 0 0; color: var(--c-primary-deep); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.trust-strip, .spec-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block: 16px;
+}
+.trust-strip { margin-bottom: 32px; }
+.trust-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--c-secondary-soft);
+  color: var(--c-secondary-deep);
+  font-size: var(--fs-sm);
+}
+.trust-strip svg, .know-card svg { width: 20px; height: 20px; }
+.model-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(14.5rem, 1fr);
+  overflow-x: auto;
+  gap: 10px;
+  padding: 4px 3px 12px;
+}
+.model-card, .know-card, .related-cards a {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-card);
+  background: var(--c-surface);
+  color: var(--c-heading);
+  text-decoration: none;
+}
+.model-card { display: flex; flex-direction: column; font-size: 14px; }
+.model-card b { margin-top: auto; }
+.model-code, .byline-dates time { white-space: nowrap; }
+.model-card strong { overflow-wrap: anywhere; }
+.model-card b, .know-card svg, .related-cards strong { color: var(--c-primary-deep); }
+.know-grid, .related-cards { display: grid; gap: 14px; }
+.know-card small, .model-strip + small, .table-tip, .quick-list span, .quick-stats span {
+  color: var(--c-muted);
+  font-size: var(--fs-sm);
+}
+.related-cards { margin-bottom: 16px; }
+.related-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 0;
+  overflow: hidden;
+  font-weight: 700;
+}
+.related-card span, .related-card strong { padding: 0 16px; }
+.related-card span { padding-top: 12px; }
+.related-card strong { padding-bottom: 14px; font-size: 14px; }
+.related-card:not(:has(strong)) span { padding-bottom: 14px; }
+.related-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 0;
+}
+.guide-page { padding-block: 24px; }
+.guide-page > * + * { margin-top: 16px; }
+.guide-page > h1 + p { margin-top: 8px; }
+.guide-page > section { margin-top: clamp(32px, 5vw, 48px); }
+.about-page > .method-limits ~ section { margin-top: 32px; }
+.guide-page .section-title + * { margin-top: 12px; }
+.guide-page .related-empty { display: grid; gap: 12px; }
+.about-banner, .category-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+}
+.about-banner, .category-banner { max-height: 320px; }
+.about-banner { aspect-ratio: 3 / 1; object-position: center 60%; }
+.category-banner { aspect-ratio: 21 / 9; }
+.quick-picks {
+  padding: clamp(16px, 3vw, 28px);
+  border: 1px solid var(--c-primary-line);
+  border-radius: var(--radius-card);
+  background: var(--grad-callout);
+}
+.quick-stats, .quick-list { padding: 0; list-style: none; }
+.quick-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 6px; }
+.quick-stats li { padding: 8px; border-radius: var(--radius-box); background: var(--c-surface); overflow-wrap: anywhere; }
+.quick-stats b, .quick-stats span { display: block; }
+.quick-stats b { font-size: 18px; color: var(--c-primary-deep); }
+.quick-stats span { font-size: 12px; }
+.quick-alert { padding: 12px; border-radius: var(--radius-box); color: var(--c-notice); background: var(--c-notice-bg); }
+.quick-list li { display: grid; padding-block: 10px; border-bottom: 1px solid var(--c-line); }
+.quick-list a { font-size: 15px; font-weight: 700; color: var(--c-primary-deep); }
+.toc-aside a[aria-current="true"] { border-left: 3px solid var(--c-primary); padding-left: 8px; color: var(--c-primary-deep); }
+tbody tr:hover, tbody tr:focus-within { background: var(--c-primary-tint); }
+@media (max-width: 41.99rem) {
+  .table-scroll { mask-image: linear-gradient(to right, var(--c-ink) calc(100% - 12px), transparent); }
+}
+@media (min-width: 42rem) {
+  .quick-list li { grid-template-columns: minmax(10em,1fr) 2fr; gap: 12px; }
+  .know-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .related-cards { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (min-width: 64rem) {
+  .model-strip { grid-auto-columns: minmax(0, 1fr); overflow-x: visible; }
+  .article-cover { aspect-ratio: 21 / 9; }
+  .article-cover img { object-position: center 60%; }
+  .rank-side .product-media { aspect-ratio: 4 / 3; max-height: 120px; }
+  .rank-side .product-media::before { width: 64px; }
+  .rank-card:target { scroll-margin-top: 100px; }
+}
+
+.quick-list span { font-size: 14px; }
+.quick-foot { margin-top: 12px; padding: 12px; background: var(--c-surface); border-radius: var(--radius-box); }
+.overview .disclosure, .disclosure + .table-tip { margin-top: 6px; }
+
+@media (max-width: 560px) {
+  .about-banner, .category-banner { max-height: 200px; }
+  .byline-dates { flex-basis: 100%; }
+  .byline-dates > span:last-child { display: block; }
+  .date-divider { display: none; }
+  .quick-stats { grid-template-columns: 1fr; }
+  .quick-stats b { white-space: nowrap; }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xining48312.github.io/xining-picks/sitemap.xml
